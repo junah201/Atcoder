@@ -14,7 +14,7 @@ void dprintf(const char *__format, ...)
 }
 
 int N, Q, query_cnt, init_value;
-int type, x, idx;
+int op, x, idx;
 vector<ll> A;
 vector<int> D;
 
@@ -32,14 +32,14 @@ int main()
     // 1번 쿼리 단위로 끊어서 처리하기
     for (int i = 0; i < Q; i++)
     {
-        scanf("%d", &type);
+        scanf("%d", &op);
 
-        if (type == 1)
+        if (op == 1)
         {
             query_cnt++;
             scanf("%d", &init_value);
         }
-        else if (type == 2)
+        else if (op == 2)
         {
             scanf("%d %d", &idx, &x);
             if (D[idx - 1] != query_cnt)
@@ -49,7 +49,7 @@ int main()
             }
             A[idx - 1] += x;
         }
-        else if (type == 3)
+        else if (op == 3)
         {
             scanf("%d", &idx);
             if (D[idx - 1] != query_cnt)
