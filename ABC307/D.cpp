@@ -5,16 +5,6 @@ using namespace std;
 #define int long long int
 #define INF LONG_LONG_MAX
 
-void dprintf(const char *__format, ...)
-{
-#ifndef ONLINE_JUDGE
-    va_list args;
-    va_start(args, __format);
-    vprintf(__format, args);
-    va_end(args);
-#endif
-}
-
 int N;
 char A[2 * 100002];
 stack<char> S;
