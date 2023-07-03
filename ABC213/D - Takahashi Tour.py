@@ -11,16 +11,18 @@ for _ in range(N-1):
     graph[a].append(b)
     graph[b].append(a)
 
-for i in range(1,N+1):
+for i in range(1, N+1):
     graph[i].sort()
 
-def dfs(idx : int):
+
+def dfs(idx: int):
     visited[idx] = True
-    print(idx, end = " ")
+    print(idx, end=" ")
     for i in range(len(graph[idx])):
         if visited[graph[idx][i]]:
             continue
         dfs(graph[idx][i])
-        print(idx, end = " ")
+        print(idx, end=" ")
+
 
 dfs(1)
